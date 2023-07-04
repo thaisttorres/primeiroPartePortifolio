@@ -1,0 +1,416 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    gap: 15px;
+    outline: 1px #181717 solid;
+    outline-offset: -3px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .github .github__text {
+    color: #181717;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 400ms;
+  }
+  
+  .githubsvg path {
+    transition: 400ms;
+  }
+  
+  .github:hover {
+    background-color: transparent;
+  }
+  
+  .github:hover .github__text {
+    color: #181717;
+  }
+  
+  .github:hover svg path {
+    fill: #181717;
+  }
+.instagram {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgba(131, 58, 180, 0.5);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgba(131, 58, 180, 0.5);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+  }
+  
+ .instagram__span {
+    margin: 10px;
+  }
+  
+  .instagram::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+  }
+  
+  .instagram:hover {
+    color: #fff;
+    border: 1px solid;
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #E4405F);
+  }
+  
+  .instagram:hover::before {
+    box-shadow: inset 0 0 0 10em;
+    box-shadow: 0 0 10px 5px rgba(228, 64, 95, 0.5), 0 0 20px 10px rgba(64, 93, 230, 0.5), 0 0 30px 15px rgba(131, 58, 180, 0.5), 0 0 40px 20px rgba(193, 53, 132, 0.5);
+  }
+
+
+
+
+.twitter {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(40, 144, 241);
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: rgb(40, 144, 241);
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+  }
+  
+  .twitter__span {
+    margin: 10px;
+  }
+  
+ .twitter::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+  }
+  
+  .twitter:hover {
+    color: #fff;
+    border: 1px solid rgb(40, 144, 241);
+  }
+  
+  .twitter:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+  }
+   
+
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sessão Menu*/
+
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #000;
+    height: 30px;
+
+}
+.menu__list__item a {
+  color: #F5F5F5;
+}
+
+/*Sessão Title*/
+
+.title__div{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+.title__profile{
+    width: 250px;
+    border-radius: 100px;
+    margin-left: 50px;
+}
+.title__container{
+    display: 
+}
+.title__bio{
+   margin-left: 20px;
+   
+}
+.title__subsection{
+    margin-left: 30px;
+}
+.title__network{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+.title__network__item a{
+    border: solid 2px;
+    padding: 5px;
+}
+.title__network__item:hover a:hover{
+   background-color:  red ;
+}
+
+/*Sessão About*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  background-color: rgb(208, 236, 248);
+
+}
+
+.about__container {
+  width: auto;
+  height: auto;
+  padding: 16px;
+  margin: 50px;
+}
+
+.about__title {
+  margin-top: 0;
+}
+
+.about__paragraph {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.about__container img {
+  display: block;
+  margin-top: 16px;
+  max-width: 100%;
+}
+
+
+/*Sessão Hobbies e Skills*/
+ .skills{
+  text-align: center;
+  margin: 50px;
+ }
+.skills__title {
+  margin-bottom: 20px;
+  }
+  
+  .skills__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  
+  .skills__box {
+    background-color: white;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  }
+  .hobbies {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .hobbies__title {
+    margin-bottom: 20px;
+  }
+  
+  .hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hobbies__box {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+  }
+
+  
+  .hobbies__name {
+    text-align: left;
+  }
+/* Experiência Acadêmica*/
+
+.academic {
+  text-align: center;
+  margin: 50px;
+}
+
+.academic__title {
+  text-align: center;
+}
+
+.academic__courses {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.academic__courses__box {
+  background-color: white;
+  padding: 10px;
+  width: auto;
+}
+
+.academic__courses__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.academic__courses__item__img img {
+  max-width: 50%;
+  max-height: 100%;
+}
+
+.academic__courses__item__title,
+.academic__courses__item__subtitle {
+  margin: 0;
+}
+
+
+/* experiência*/
+
+section.experience{
+  display: flex;
+  flex-direction: column;
+}
+
+/*Contato*/
+
+section.formcontato{
+
+}
+
+/*footeer*/
+
+section.footer{
+   
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menu */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Experiências acadêmicas*/
+
+/*Expeirência profissional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sessão sobre*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formação Acadêmica*/
+
+/*Experiência Profissional*/
+
+ /*Contato*/
+
+/*Footer*/
+
+}
